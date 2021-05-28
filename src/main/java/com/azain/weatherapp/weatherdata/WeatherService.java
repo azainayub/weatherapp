@@ -5,12 +5,12 @@ import com.azain.weatherapp.weatherdata.utils.JSONParser;
 
 import java.io.IOException;
 
-public class WeatherData
+public class WeatherService
 {
     private Weather weather;
     private JSONParser jsonParser;
 
-    public WeatherData(String location) throws IOException, InterruptedException {
+    public WeatherService(String location) throws IOException, InterruptedException {
         jsonParser = new JSONParser(location);
         weather = jsonParser.getWeather();
     }
@@ -25,7 +25,7 @@ public class WeatherData
 
     @Override
     public String toString() {
-        return "WeatherData{" +
+        return "WeatherService{" +
                 "weather=" + weather +
                 '}';
     }

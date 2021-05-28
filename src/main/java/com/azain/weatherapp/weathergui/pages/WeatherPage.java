@@ -4,7 +4,7 @@ import com.azain.weatherapp.datastructures.LinkedList;
 import com.azain.weatherapp.weather.CurrentObservation;
 import com.azain.weatherapp.weather.*;
 import com.azain.weatherapp.weather.currentobservation.*;
-import com.azain.weatherapp.weatherdata.WeatherData;
+import com.azain.weatherapp.weatherdata.WeatherService;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 import javax.swing.*;
 
@@ -27,8 +27,8 @@ public class WeatherPage extends javax.swing.JPanel
     private Condition condition;
     private Wind wind;
 
-    public WeatherPage(WeatherApplicationGUI app, WeatherData weatherData) {
-        this.weather = weatherData.getWeather();
+    public WeatherPage(WeatherApplicationGUI app, WeatherService weatherService) {
+        this.weather = weatherService.getWeather();
         this.currentObservation = weather.getCurrentObservation();
         this.forecastList = weather.getForecasts();
         this.location = weather.getLocation();
