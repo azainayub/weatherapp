@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weatherdata.utils;
+package com.azain.weatherapp.weather.utils;
 
 import com.azain.weatherapp.datastructures.LinkedList;
 import com.azain.weatherapp.weather.*;

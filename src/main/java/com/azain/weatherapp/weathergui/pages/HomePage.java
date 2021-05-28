@@ -1,7 +1,7 @@
 package com.azain.weatherapp.weathergui.pages;
 
 import com.azain.weatherapp.location.CurrentLocation;
-import com.azain.weatherapp.weatherdata.WeatherService;
+import com.azain.weatherapp.weather.WeatherService;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
 import org.json.JSONException;

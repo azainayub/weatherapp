@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weatherdata.utils;
+package com.azain.weatherapp.weather.utils;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

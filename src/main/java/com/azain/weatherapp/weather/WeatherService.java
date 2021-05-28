@@ -1,7 +1,6 @@
-package com.azain.weatherapp.weatherdata;
+package com.azain.weatherapp.weather;
 
-import com.azain.weatherapp.weather.Weather;
-import com.azain.weatherapp.weatherdata.utils.JSONParser;
+import com.azain.weatherapp.weather.utils.JSONParser;
 
 import java.io.IOException;
 

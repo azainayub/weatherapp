@@ -4,7 +4,7 @@ import com.azain.weatherapp.datastructures.LinkedList;
 import com.azain.weatherapp.weather.CurrentObservation;
 import com.azain.weatherapp.weather.*;
 import com.azain.weatherapp.weather.currentobservation.*;
-import com.azain.weatherapp.weatherdata.WeatherService;
+import com.azain.weatherapp.weather.WeatherService;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 import javax.swing.*;
 
