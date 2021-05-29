@@ -9,6 +9,10 @@ public class WeatherService
     private Weather weather;
     private JSONParser jsonParser;
 
+    /*
+    * Parse the JSON response and convert it into
+    * a Weather object
+    * */
     public WeatherService(String location) throws IOException, InterruptedException {
         jsonParser = new JSONParser(location);
         weather = jsonParser.getWeather();
