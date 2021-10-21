@@ -83,6 +83,7 @@ public class Request
                 .build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.toString());
         return response;
     }
 }
