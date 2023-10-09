@@ -1,9 +1,10 @@
 package com.azain.weatherapp.weathergui;
 
-import com.azain.weatherapp.datastructures.Stack;
 import com.azain.weatherapp.weathergui.pages.HomePage;
 
 import java.util.EmptyStackException;
+import java.util.Stack;
+
 import javax.swing.*;
 
 /**

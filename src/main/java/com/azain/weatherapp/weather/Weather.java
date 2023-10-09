@@ -1,8 +1,7 @@
 package com.azain.weatherapp.weather;
 
 
-import com.azain.weatherapp.datastructures.LinkedList;
-
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class Weather

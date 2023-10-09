@@ -1,11 +1,13 @@
 package com.azain.weatherapp.weathergui.pages;
 
-import com.azain.weatherapp.datastructures.LinkedList;
 import com.azain.weatherapp.weather.CurrentObservation;
 import com.azain.weatherapp.weather.*;
 import com.azain.weatherapp.weather.currentobservation.*;
 import com.azain.weatherapp.weatherdata.WeatherData;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
+
+import java.util.LinkedList;
+
 import javax.swing.*;
 
 /**

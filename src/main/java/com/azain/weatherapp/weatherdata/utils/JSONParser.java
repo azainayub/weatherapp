@@ -1,11 +1,11 @@
 package com.azain.weatherapp.weatherdata.utils;
 
-import com.azain.weatherapp.datastructures.LinkedList;
 import com.azain.weatherapp.weather.*;
 import com.azain.weatherapp.weather.currentobservation.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.TimeZone;
 
 public class JSONParser
