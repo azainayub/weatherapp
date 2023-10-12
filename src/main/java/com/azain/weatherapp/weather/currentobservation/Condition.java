@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Condition
 {
     private String text;
-    private int code;
+    private String code;
     private int temperature;
     private String IMAGE_URL;
 
@@ -22,8 +22,8 @@ public class Condition
         this.text = text;
     }
 
-    public void setCode(int code) {
-        this.IMAGE_URL = "http://l.yimg.com/a/i/us/we/52/" + code  + ".gif";
+    public void setCode(String code) {
+        this.IMAGE_URL = "https://openweathermap.org/img/wn/" + code  + "@2x.png";
         this.code = code;
     }
 
@@ -31,7 +31,7 @@ public class Condition
         return temperature;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 

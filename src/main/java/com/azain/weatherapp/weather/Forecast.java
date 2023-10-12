@@ -16,7 +16,7 @@ public class Forecast
     private int low;
     private int high;
     private String text;
-    private int code;
+    private String code;
     private String IMAGE_URL;
 
     public Forecast()
@@ -25,7 +25,7 @@ public class Forecast
     }
 
     public Forecast(String day, int lDate, int low, int high,
-                    String text, int code)
+                    String text, String code)
     {
         this.code = code;
         this.high = high;
@@ -65,8 +65,8 @@ public class Forecast
         this.low = low;
     }
 
-    public void setCode(int code) {
-        String IMAGE_URL = "http://l.yimg.com/a/i/us/we/52/" + code  + ".gif";
+    public void setCode(String code) {
+        String IMAGE_URL = "https://openweathermap.org/img/wn/" + code  + "@2x.png";
         this.setIMAGE_URL(IMAGE_URL);
         this.code = code;
     }
@@ -75,7 +75,7 @@ public class Forecast
         return text;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 

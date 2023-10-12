@@ -3,7 +3,6 @@ package com.azain.weatherapp.weathergui.pages;
 import com.azain.weatherapp.weather.CurrentObservation;
 import com.azain.weatherapp.weather.*;
 import com.azain.weatherapp.weather.currentobservation.*;
-import com.azain.weatherapp.weatherdata.WeatherData;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 
 import java.util.LinkedList;
@@ -29,8 +28,8 @@ public class WeatherPage extends javax.swing.JPanel
     private Condition condition;
     private Wind wind;
 
-    public WeatherPage(WeatherApplicationGUI app, WeatherData weatherData) {
-        this.weather = weatherData.getWeather();
+    public WeatherPage(WeatherApplicationGUI app, Weather weather) {
+        this.weather = weather;
         this.currentObservation = weather.getCurrentObservation();
         this.forecastList = weather.getForecasts();
         this.location = weather.getLocation();
@@ -188,11 +187,6 @@ public class WeatherPage extends javax.swing.JPanel
         add(jSeparator10);
         jSeparator10.setBounds(70, 490, 260, 10);
 
-        jSeparator11.setBackground(new java.awt.Color(225, 190, 231));
-        jSeparator11.setForeground(new java.awt.Color(255, 255, 255));
-        jSeparator11.setToolTipText(null);
-        add(jSeparator11);
-        jSeparator11.setBounds(70, 520, 260, 10);
 
         forecastList.removeFirst();
         Forecast forecast = forecastList.removeFirst();
@@ -369,36 +363,6 @@ public class WeatherPage extends javax.swing.JPanel
         forecast7ConditionLabel.setText(forecast.getText());
         add(forecast7ConditionLabel);
         forecast7ConditionLabel.setBounds(220, 470, 110, 20);
-
-        forecast = forecastList.removeFirst();
-        forecast8DayLabel.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        forecast8DayLabel.setForeground(new java.awt.Color(255, 255, 255));
-        forecast8DayLabel.setToolTipText(forecast.getForecastSentence());
-        forecast8DayLabel.setText(forecast.getDay());
-        add(forecast8DayLabel);
-        forecast8DayLabel.setBounds(70, 500, 70, 20);
-
-        forecast8TempLabel.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        forecast8TempLabel.setForeground(new java.awt.Color(255, 255, 255));
-        forecast8TempLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        forecast8TempLabel.setToolTipText(forecast.getForecastSentence());
-        forecast8TempLabel.setText(forecast.getHigh() + "°C/" + forecast.getLow()+ "°C");
-        add(forecast8TempLabel);
-        forecast8TempLabel.setBounds(140, 500, 80, 20);
-
-        forecast8ConditionLabel.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        forecast8ConditionLabel.setForeground(new java.awt.Color(255, 255, 255));
-        forecast8ConditionLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        forecast8ConditionLabel.setIcon(forecast.getIcon());
-        forecast8ConditionLabel.setToolTipText(forecast.getForecastSentence());
-        forecast8ConditionLabel.setText(forecast.getText());
-        add(forecast8ConditionLabel);
-        forecast8ConditionLabel.setBounds(220, 500, 110, 20);
-
-        jSeparator9.setBackground(new java.awt.Color(225, 190, 231));
-        jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
-        add(jSeparator9);
-        jSeparator9.setBounds(70, 430, 260, 10);
 
         currentTemperatureLabel.setBackground(new java.awt.Color(0, 0, 0));
         currentTemperatureLabel.setFont(new java.awt.Font("Segoe UI", 0, 44)); // NOI18N

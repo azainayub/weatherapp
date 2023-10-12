@@ -1,7 +1,8 @@
 package com.azain.weatherapp.weathergui.pages;
 
 import com.azain.weatherapp.location.CurrentLocation;
-import com.azain.weatherapp.weatherdata.WeatherData;
+import com.azain.weatherapp.weather.Weather;
+import com.azain.weatherapp.weatherdata.WeatherAPI;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 import com.maxmind.geoip2.exception.GeoIp2Exception;
 import org.json.JSONException;
@@ -217,8 +218,10 @@ public class HomePage extends javax.swing.JPanel
                 errorIcon = new ImageIcon(getClass().getResource("/Icons/searchoff.png"));
                 errorMessage = "Can't search, you have not entered any city name!";
             }
-            else
-            weatherData = new WeatherData(location);
+            else {
+                WeatherAPI weatherAPI = new WeatherAPI();
+                weather = weatherAPI.getWeatherData(location);
+            }
         }
 
         catch (JSONException | IllegalArgumentException e)
@@ -244,7 +247,7 @@ public class HomePage extends javax.swing.JPanel
         {
             TimerTask task = new TimerTask() {
                 public void run() {
-                    app.changeCurrentPage(new WeatherPage(app, weatherData), false);
+                    app.changeCurrentPage(new WeatherPage(app, weather), false);
                 }
             };
             Timer timer = new Timer("Timer");
@@ -262,7 +265,7 @@ public class HomePage extends javax.swing.JPanel
         totalTypedCharLabel.setText(totalChar + "/20");
     }
 
-    private WeatherData weatherData;
+    private Weather weather;
     private javax.swing.JPanel centerPanel;
     private javax.swing.JLabel cityLocationIcon;
     private javax.swing.JLabel currentLocationIcon;
