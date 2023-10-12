@@ -1,4 +1,4 @@
-package com.azain.weatherapp.location;
+package com.azain.weatherapp.geolocation;
 
 import java.io.BufferedReader;
 import java.io.IOException;

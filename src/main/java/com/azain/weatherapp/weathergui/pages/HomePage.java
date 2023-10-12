@@ -1,6 +1,6 @@
 package com.azain.weatherapp.weathergui.pages;
 
-import com.azain.weatherapp.location.CurrentLocation;
+import com.azain.weatherapp.geolocation.CurrentLocation;
 import com.azain.weatherapp.models.Weather;
 import com.azain.weatherapp.weatherdata.WeatherAPI;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
