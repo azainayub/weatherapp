@@ -1,10 +1,11 @@
-package com.azain.weatherapp.weather;
+package com.azain.weatherapp.models;
 
-import com.azain.weatherapp.weather.currentobservation.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+
+import com.azain.weatherapp.models.currentobservation.*;
 
 public class CurrentObservation
 {

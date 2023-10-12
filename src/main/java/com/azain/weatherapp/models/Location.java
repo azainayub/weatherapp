@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weather;
+package com.azain.weatherapp.models;
 
 import java.util.Objects;
 import java.util.TimeZone;

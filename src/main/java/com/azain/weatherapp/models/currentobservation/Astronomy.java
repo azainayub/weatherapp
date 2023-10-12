@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weather.currentobservation;
+package com.azain.weatherapp.models.currentobservation;
 
 
 public class Astronomy

@@ -13,8 +13,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.azain.weatherapp.Config;
-import com.azain.weatherapp.weather.Forecast;
-import com.azain.weatherapp.weather.Weather;
+import com.azain.weatherapp.models.Forecast;
+import com.azain.weatherapp.models.Weather;
 
 public class WeatherAPI {
     public Weather getWeatherData(String location) throws IOException, InterruptedException, IllegalArgumentException {

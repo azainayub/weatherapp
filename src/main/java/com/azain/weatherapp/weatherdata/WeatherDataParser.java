@@ -10,14 +10,14 @@ import java.util.concurrent.TimeUnit;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.azain.weatherapp.weather.CurrentObservation;
-import com.azain.weatherapp.weather.Forecast;
-import com.azain.weatherapp.weather.Location;
-import com.azain.weatherapp.weather.Weather;
-import com.azain.weatherapp.weather.currentobservation.Astronomy;
-import com.azain.weatherapp.weather.currentobservation.Atmosphere;
-import com.azain.weatherapp.weather.currentobservation.Condition;
-import com.azain.weatherapp.weather.currentobservation.Wind;
+import com.azain.weatherapp.models.CurrentObservation;
+import com.azain.weatherapp.models.Forecast;
+import com.azain.weatherapp.models.Location;
+import com.azain.weatherapp.models.Weather;
+import com.azain.weatherapp.models.currentobservation.Astronomy;
+import com.azain.weatherapp.models.currentobservation.Atmosphere;
+import com.azain.weatherapp.models.currentobservation.Condition;
+import com.azain.weatherapp.models.currentobservation.Wind;
 
 public class WeatherDataParser {
     private JSONObject weatherDataJsonObject;

@@ -1,8 +1,7 @@
 package com.azain.weatherapp.weathergui.pages;
 
-import com.azain.weatherapp.weather.CurrentObservation;
-import com.azain.weatherapp.weather.*;
-import com.azain.weatherapp.weather.currentobservation.*;
+import com.azain.weatherapp.models.*;
+import com.azain.weatherapp.models.currentobservation.*;
 import com.azain.weatherapp.weathergui.WeatherApplicationGUI;
 
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weather.currentobservation;
+package com.azain.weatherapp.models.currentobservation;
 
 import java.util.Objects;
 

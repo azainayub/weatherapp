@@ -1,4 +1,4 @@
-package com.azain.weatherapp.weather.currentobservation;
+package com.azain.weatherapp.models.currentobservation;
 
 import javax.swing.*;
 import java.net.MalformedURLException;
