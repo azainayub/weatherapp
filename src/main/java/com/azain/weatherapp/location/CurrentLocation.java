@@ -14,7 +14,7 @@ public class CurrentLocation {
 
     public CurrentLocation() throws IOException
     {
-        database = new File("C:\\Users\\Azain\\Documents\\Java-Projects\\WeatherApp\\src\\main\\resources\\GeoLite2-City.mmdb");
+        database = new File("src\\main\\resources\\GeoLite2-City.mmdb");
         dbReader = new DatabaseReader.Builder(database).build();
     }
 
