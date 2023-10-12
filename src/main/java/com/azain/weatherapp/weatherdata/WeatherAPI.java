@@ -2,18 +2,16 @@ package com.azain.weatherapp.weatherdata;
 
 import java.io.IOException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedList;
+import java.nio.charset.StandardCharsets;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.azain.weatherapp.Config;
-import com.azain.weatherapp.models.Forecast;
 import com.azain.weatherapp.models.Weather;
 
 public class WeatherAPI {
@@ -26,7 +24,7 @@ public class WeatherAPI {
         // Get weather data from the api
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest geocodingRequest = HttpRequest.newBuilder()
-                .uri(URI.create(geocodingUrl + "?q=" + location + "&limit=1&appid=" + apiKey))
+                .uri(URI.create(geocodingUrl + "?q=" + URLEncoder.encode(location, StandardCharsets.UTF_8.toString()) + "&limit=1&appid=" + apiKey))
                 .build();
 
         HttpResponse<String> geocodingResponse = client.send(geocodingRequest, HttpResponse.BodyHandlers.ofString());
