@@ -22,7 +22,6 @@ import com.azain.weatherapp.models.currentobservation.Wind;
 public class WeatherDataParser {
     private JSONObject weatherDataJsonObject;
     private JSONObject geocodingJsonObject;
-    private Weather weather;
 
     public WeatherDataParser(JSONObject weatherDataJsonObject, JSONObject geocodingJsonObject) throws IOException, InterruptedException {
         this.weatherDataJsonObject = weatherDataJsonObject;
@@ -35,7 +34,6 @@ public class WeatherDataParser {
         }
 
         Weather weather;
-        
         CurrentObservation currentObservation = this.jsonToCurrentObservation();
         Location location = this.jsonToLocation();
         LinkedList<Forecast> forecasts = this.jsonToForecasts();
@@ -92,7 +90,7 @@ public class WeatherDataParser {
         JSONObject current = weatherDataJsonObject.getJSONObject("current");
 
         Wind wind = new Wind();
-        wind.setChill((int) current.getDouble("wind_gust"));
+        // wind.setChill((int) current.getDouble("wind_gust"));
         wind.setDirection(current.getInt("wind_deg"));
         wind.setSpeed(current.getDouble("wind_speed"));
 
